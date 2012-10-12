@@ -64,7 +64,7 @@ contribute to the value used in comparisons may be safe.
 
  \subsection{Functional interface}
  \subsubsection{make-heap}
-   (make-heap \&key (test #'<) (initial-size 16) (key \#'identity)) -> heap
+   (make-heap \&key (test \#'<) (initial-size 16) (key \#'identity)) -> heap
 
  Returns a newly created heap, using the specified test as the heap
  criterion, using {\sl key} as the value to be compared. The key
@@ -87,7 +87,7 @@ contribute to the value used in comparisons may be safe.
  This function returns T when called on an empty heap, NIL otherwise.
 
  \subsubsection{heapify}
-   (heapify sequence \&key (test #'<) (key \#'identity)) -> heap
+   (heapify sequence \&key (test \#'<) (key \#'identity)) -> heap
 
  Creates a heap populated by the sequence passed in, returning a heap
  that should behave identically as one created by MAKE-HEAP, then
