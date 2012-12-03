@@ -64,47 +64,47 @@ contribute to the value used in comparisons may be safe.
 
  \subsection{Functional interface}
  \subsubsection{make-heap}
-   (make-heap \&key (test \#'<) (initial-size 16) (key \#'identity)) -> heap
+   (make-heap \&key (test \#'<) (initial-size 16) (key \#'identity)) $\rightarrow$ heap
 
  Returns a newly created heap, using the specified test as the heap
  criterion, using {\sl key} as the value to be compared. The key
  defaults to the identity function.
 
  \subsubsection{insert}
-   (insert value heap) -> value
+   (insert value heap) $\rightarrow$ value
 
  Inserts a new element into the heap. The value inserted is returned.
 
  \subsubsection{remove}
-   (remove heap) -> (or value nil)
+   (remove heap) $\rightarrow$ (or value nil)
 
  Removes and returns the value at the head of the heap, unless the
  heap is empty. If the heap is empty, NIL is returned.
  
  \subsubsection{emptyp}
-   (emptyp heap) -> boolean
+   (emptyp heap) $\rightarrow$ boolean
 
  This function returns T when called on an empty heap, NIL otherwise.
 
  \subsubsection{heapify}
-   (heapify sequence \&key (test \#'<) (key \#'identity)) -> heap
+   (heapify sequence \&key (test \#'\textless) (key \#'identity)) $\rightarrow$ heap
 
  Creates a heap populated by the sequence passed in, returning a heap
  that should behave identically as one created by MAKE-HEAP, then
  populated element by element.
 
  \subsubsection{peek}
-   (peek heap) -> value
+   (peek heap) $\rightarrow$ value
 
  Returns the value at the top of the heap, without modifying the heap.
 
  \subsubsection{heap-p}
-   (heap-p object) -> boolean
+   (heap-p object) $\rightarrow$ boolean
 
  This function returns NIL when called on a non-heap object and a true
  value if presented with a heap object.
  
- \subsubsection(MACRO declare-heap)
+ \subsubsection{MACRO declare-heap}
    (declare-heap \&key (test \#'<) (key \#'identity))
 
  This macro either updates internal data structures about a specific
